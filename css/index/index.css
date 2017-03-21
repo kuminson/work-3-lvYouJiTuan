@@ -1,0 +1,220 @@
+/*信息栏*/
+.headerinfo{
+	width: 100%;
+	min-width: 1000px;
+	background-color: #343434;
+}
+.h_infobar{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 35px;
+	line-height: 35px;
+	color: #FFF;
+	font-size: 14px;
+	overflow: hidden;
+	vertical-align: middle;
+}
+.hi_date{
+	float: left;
+}
+.hid_date{
+	margin-left: 10px;
+}
+.hi_log{
+	float: right;
+}
+.hi_log button{
+}
+.hil_input{
+	height: 20px;
+	line-height: 20px;
+	width: 100px;
+	padding-left: 5px;
+}
+/*头部*/
+.header{
+	height: 120px;
+	width: 100%;
+	background:#eaeaea url(/work-3-lvYouJiTuan/images/index/header.png) no-repeat  90% 60%
+	/*background-color: #eaeaea;*/
+}
+.ctbox{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.header .ctbox{
+	height: 100%;
+}
+.h_logo{
+	height: 80px;
+	vertical-align: middle;
+}
+.h_title{
+	display: inline-block;
+	margin:0;
+	line-height: 120px;
+	vertical-align: middle;
+	color: #3C4298;
+}
+
+
+/*主要内容*/
+.main{
+	width: 100%;
+	background-color: #1c1651;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.main .ctbox{
+	min-height: 500px;
+	overflow: hidden;
+}
+.m_list{
+
+}
+.m_list.sys{
+	width: 715px;
+	float: left;
+}
+.ml_title{
+	height: 30px;
+	margin:0 10px 0;
+	background-color: #0078D7;
+	color: #FFF;
+	font-size: 18px;
+	text-indent: 10px;
+	line-height: 30px;
+}
+.ml_listbox{
+	width: 100%;
+	overflow: hidden;
+	margin: 0;
+	padding-left: 0;
+}
+.mll_fall{
+	width: 225px;
+	margin-left: 10px;
+	list-style: none;
+	float: left;
+}
+.mllf_btnbox{
+	margin: 0;
+	padding-left: 0;
+	width: 100%;
+}
+
+.mll_btn{
+	width: 100%;
+	margin-top: 10px;
+	background-color: #CCC;
+	list-style: none;
+	color: #FFF;
+	position: relative;
+	cursor: pointer;
+}
+.mll_btn.hx1{
+	height: 150px;
+}
+.mll_btn.hx2{
+	height: 310px;
+}
+.mll_btn.magnet1{
+	background-color: #80387A;
+}
+.mll_btn.magnet1:hover{
+	background-color: #9E5698;
+}
+.mll_btn.magnet2{
+	background-color: #C54247;
+}
+.mll_btn.magnet2:hover{
+	background-color: #E36065;
+}
+.mll_btn.magnet3{
+	background-color: #494099;
+}
+.mll_btn.magnet3:hover{
+	background-color: #675EB7;
+}
+.mll_btn.magnet4{
+	background-color: #24549C;
+}
+.mll_btn.magnet4:hover{
+	background-color: #4272BA;
+}
+.mll_btn.magnet5{
+	background-color: #00AFF0;
+}
+.mll_btn.magnet5:hover{
+	background-color: #1ECDFF;
+}
+.mll_btn.magnet6{
+	background-color: #0078D7;
+}
+.mll_btn.magnet6:hover{
+	background-color: #1E96F5;
+}
+.mllb_icon{
+	font-size: 60px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -30px;
+	margin-top: -30px;
+}
+.mllb_title{
+	margin: 0;
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+	right: 10px;
+}
+.info .mll_btn{
+	cursor: auto;
+}
+.m_list.info{
+	width: 245px;
+	float: right;
+}
+.i_btn{
+	width: 100%;
+}
+.i_data{
+	height: 100%;
+	width: 100%;
+}
+.cover{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 10000;
+}
+.i_info{
+	margin: 0;
+	padding-top: 15px;
+	text-align: center;
+}
+
+/*日历个性化*/
+.gldp-default{
+	position: static;
+}
+
+/*脚部*/
+.footer{
+	width: 100%;
+	background-color: #eaeaea;
+	border-top: 2px solid #CCC;
+	padding-bottom: 10px;
+}
+.f_info{
+	text-align: center;
+	color: #004F8D;
+	margin-top: 5px;
+	margin-bottom: 0;
+	font-size: 14px;
+}

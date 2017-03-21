@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>青岛旅游集团统一门户平台</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 引入重置样式 -->
+	<link rel="stylesheet" type="text/css" href="/work-3-lvYouJiTuan/resource/normalize/normalize.css">
+	<!-- 引入font-awesome样式 -->
+	<link rel="stylesheet" href="/work-3-lvYouJiTuan/resource/font-awesome-4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/work-3-lvYouJiTuan/resource/glDatePicker/styles/glDatePicker.default.css">
+	<!-- 引入index样式 -->
+	<link rel="stylesheet" type="text/css" href="/work-3-lvYouJiTuan/css/index/index.css">
+
+</head>
+<body>
+	<!-- 头部信息 -->
+	<div id="headerinfo" class="headerinfo">
+		<div class="h_infobar">
+			<div class="hi_date">欢迎进入青岛旅游集团统一门户平台<span id="hid_date" class="hid_date">今天是</span></div>
+			<div class="hi_log" id="hi_login">
+				请先登录
+				<button id="hil_login">登录</button>
+			</div>
+		</div>
+	</div>
+	<!-- 头部 -->
+	<div class="header">
+		<div class="ctbox">
+			<!-- logo -->
+			<img src="/work-3-lvYouJiTuan/images/index/logo.png" alt="青岛旅游集团logo" class="h_logo" />
+			<!-- 标题 -->
+			<h1 class="h_title">青岛旅游集团</h1>
+			<h1 class="h_title">|</h1>
+			<h1 class="h_title">统一信息门户平台</h1>
+		</div>
+	</div>
+	<!-- 主体内容 -->
+	<div class="main">
+		<div class="ctbox">
+			<div class="m_list sys">
+				<h2 class="ml_title">系统导航</h2>
+				<ul class="ml_listbox" id="ml_sys">
+					<li class="mll_btn hx1 magnet1">
+						<span class="mllb_icon fa fa-car"></span>
+						<h3 class="mllb_title">停车系统</h3>
+					</li>
+					<li class="mll_btn hx2 magnet2">
+						<span class="mllb_icon fa fa-wifi"></span>
+						<h3 class="mllb_title">WiFi系统</h3>
+					</li>
+					<li class="mll_btn hx1 magnet3">
+						<span class="mllb_icon fa fa-cogs"></span>
+						<h3 class="mllb_title">ERP系统</h3>
+					</li>
+					<li class="mll_btn hx2 magnet4">
+						<span class="mllb_icon fa fa-desktop"></span>
+						<h3 class="mllb_title">OA系统</h3>
+					</li>
+					<li class="mll_btn hx2 magnet5">
+						<span class="mllb_icon fa fa-clipboard"></span>
+						<h3 class="mllb_title">档案系统</h3>
+					</li>
+					<li class="mll_btn hx1 magnet6">
+						<span class="mllb_icon fa fa-envelope"></span>
+						<h3 class="mllb_title">邮件系统</h3>
+					</li>
+				</ul>
+			</div>
+			<div class="m_list info">
+				<h2 class="ml_title">实时消息</h2>
+				<ul class="ml_listbox" id="ml_info">
+					<li class="mll_btn hx1 magnet1">
+						<div class="i_btn" id="i_btn" gldp-id="mydate"></div>
+						<div class="i_data" gldp-el="mydate"></div>
+						<div class="cover"></div>
+					</li>
+					<li class="mll_btn hx1 magnet2">
+						<p class="i_info">天气：晴转多云</p>
+						<p class="i_info">温度：15℃-4℃</p>
+						<p class="i_info">风向：南风3-4级</p>
+						<h3 class="mllb_title">天气状况</h3>
+					</li>
+					<li class="mll_btn hx1 magnet3">
+						<p class="i_info">AQI指数：66</p>
+						<p class="i_info">PM2.5：11 μg/m³</p>
+						<p class="i_info">PM10：168 μg/m³</p>
+						<h3 class="mllb_title">空气状况</h3>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 脚部 -->
+	<div class="footer">
+		<div class="ctbox">
+			<p class="f_info">
+				<a href="javascript:void(0)" class="fi_btn">帮助</a>
+				<span>|</span>
+				<a href="javascript:void(0)" class="fi_btn">维护</a>
+			</p>
+			<p class="f_info">建议浏览器：最新Chrome、Firefox、Opera及IE8以上</p>
+			<p class="f_info">版权所有&copy;2017-2018&nbsp;青岛旅游集团</p>
+		</div>
+	</div>
+
+	<!-- 引入jQuery -->
+	<script type="text/javascript" src="/work-3-lvYouJiTuan/resource/jquery/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="/work-3-lvYouJiTuan/resource/glDatePicker/glDatePicker.min.js"></script>
+	<!-- 引入通用JS文件 -->
+	<script type="text/javascript" src="/work-3-lvYouJiTuan/js/common/common.js"></script>
+	<!-- 引入JS文件 -->
+	<script type="text/javascript" src="/work-3-lvYouJiTuan/js/index/index.js"></script>
+</body>
+</html>
