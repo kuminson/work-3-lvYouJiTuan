@@ -14,9 +14,9 @@ $(function(){
 	getnowtime("#hid_date");
 
 	// 登录
-	$("#hil_login").on("click",function(){
-		window.location.href = rootUrl + "/html/login/login.html";
-	});
+	// $("#hil_login").on("click",function(){
+	// 	window.location.href = rootUrl + "/html/login/login.html";
+	// });
 });
 
 // 加载瀑布布局
