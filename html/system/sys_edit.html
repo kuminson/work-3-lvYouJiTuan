@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>青岛旅游集团统一门户平台</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- 引入重置样式 -->
+	<link rel="stylesheet" type="text/css" href="/work-3-lvYouJiTuan/resource/normalize/normalize.css">
+	<!-- 引入font-awesome样式 -->
+	<link rel="stylesheet" href="/work-3-lvYouJiTuan/resource/font-awesome-4.7.0/css/font-awesome.min.css">
+	<!-- 引入easyui -->
+	<link rel="stylesheet" type="text/css" href="/work-3-lvYouJiTuan/resource/easyui/themes/icon.css">
+	<link rel="stylesheet" type="text/css" href="/work-3-lvYouJiTuan/resource/easyui/themes/default/easyui.css">
+	<!-- 引入index样式 -->
+	<link rel="stylesheet" type="text/css" href="/work-3-lvYouJiTuan/css/system/sys_edit.css">
+
+</head>
+<body>
+	<!-- 表单 -->
+	<form class="sys_form">
+		<div class="sf_list">
+			<input id="sysName" class="easyui-textbox" data-options="label:'系统名称：',labelWidth:'100px'" style="width:100%">
+		</div>
+		<div class="sf_list">
+			<input id="sysSite" class="easyui-textbox" data-options="label:'系统地址：',labelWidth:'100px'" style="width:100%">
+		</div>
+		<div class="sf_list">
+			<input id="plateSize" class="easyui-combobox" style="width:100%">
+		</div>
+		<div class="sf_list">
+			<input id="orderNum" class="easyui-combobox" style="width:100%">
+		</div>
+		<div class="sf_list">
+			<input id="iconStyle" class="easyui-combobox" style="width:100%">
+		</div>
+		<div class="sf_list">
+			<span class="sfl_label">图标预览：</span>
+			<span id="sfl_icon" class="fa fa-bar-chart sfl_icon"></span>
+		</div>
+		<div class="sf_btn">
+			<a id="btn_save" href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-save'" style="float: left;margin-left: 20px">保&nbsp;存</a>
+			<a id="btn_cancel" href="javascript:void(0)" class="easyui-linkbutton" data-options="iconCls:'icon-cancel'" style="float: right;margin-right: 20px">取&nbsp;消</a>
+		</div>
+	</form>
+	<!-- 引入jQuery -->
+	<script type="text/javascript" src="/work-3-lvYouJiTuan/resource/jquery/jquery-1.11.3.min.js"></script>
+	<!-- 引入easyui -->
+	<script type="text/javascript" src="/work-3-lvYouJiTuan/resource/easyui/jquery.easyui.min.js"></script>
+	<!-- 引入通用JS文件 -->
+	<script type="text/javascript" src="/work-3-lvYouJiTuan/js/common/common.js"></script>
+	<!-- 引入JS文件 -->
+	<script type="text/javascript" src="/work-3-lvYouJiTuan/js/system/sys_edit.js"></script>
+</body>
+</html>

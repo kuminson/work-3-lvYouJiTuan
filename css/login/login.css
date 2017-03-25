@@ -93,6 +93,12 @@
 	letter-spacing: 10px;
 	cursor: pointer;
 }
+.m_login:hover{
+	background-color: #005AB9;
+}
+.m_login:focus{
+	outline: none;
+}
 
 
 /*脚部*/

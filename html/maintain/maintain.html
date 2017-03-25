@@ -13,12 +13,23 @@
 	<link rel="stylesheet" type="text/css" href="/work-3-lvYouJiTuan/resource/easyui/themes/icon.css">
 	<link rel="stylesheet" type="text/css" href="/work-3-lvYouJiTuan/resource/easyui/themes/default/easyui.css">
 	<!-- 引入index样式 -->
-	<link rel="stylesheet" type="text/css" href="/work-3-lvYouJiTuan/css/login/login.css">
+	<link rel="stylesheet" type="text/css" href="/work-3-lvYouJiTuan/css/common/common.css">
+	<link rel="stylesheet" type="text/css" href="/work-3-lvYouJiTuan/css/maintain/maintain.css">
 
 </head>
 <body>
+	<!-- 头部信息 -->
+	<div id="headerinfo" class="headerinfo">
+		<div class="h_infobar">
+			<div class="hi_date">欢迎进入青岛旅游集团统一门户平台<span id="hid_date" class="hid_date">今天是</span></div>
+			<div class="hi_log" id="hi_loginfo">
+				<span class="hil_info">管理员，欢迎您</span>
+				<button>退出</button>
+			</div>
+		</div>
+	</div>
 	<!-- 头部 -->
-	<div class="header" id="header">
+	<div class="header">
 		<div class="ctbox">
 			<!-- logo -->
 			<img src="/work-3-lvYouJiTuan/images/index/logo.png" alt="青岛旅游集团logo" class="h_logo" />
@@ -28,34 +39,42 @@
 			<h1 class="h_title">统一信息门户平台</h1>
 		</div>
 	</div>
-	<!-- 主体 -->
+
+	<!-- 主要内容 -->
 	<div class="main" id="main">
-		<img src="/work-3-lvYouJiTuan/images/login/back.jpg" alt="背景图" class="backimg" />
-		<div class="form">
-			<h2 class="f_title">用户登录：</h2>
-			<div class="f_input">
-	            <input id="username" class="easyui-textbox" style="width:100%;height:34px;padding:10px;" />
-	        </div>
-	        <div class="f_input">
-	            <input id="password" class="easyui-passwordbox" style="width:100%;height:34px;padding:10px;" />
-	        </div>
-	        <label class="f_radio">
-	        	<input type="radio" name="rname" />记住用户名
-	        </label>
-	        <label class="f_radio">
-	        	<input type="radio" name="auto" />自动登录
-	        </label>
-	        <button id="m_login" class="m_login">登&nbsp;录</button>
+		<div id="m_layout" class="easyui-layout" fit="true">
+		    <div data-options="region:'west',title:'系统维护',split:true" style="width:200px;">
+		    	<ul class="ml_nav">
+		    		<li class="mln_list active">
+		    			<span class="mlnl_icon fa fa-group"></span>
+		    			<a href="javascript:void(0)" class="mlnl_link">用户总线管理</a>
+		    		</li>
+		    		<li class="mln_list">
+		    			<span class="mlnl_icon fa fa-sliders"></span>
+		    			<a href="javascript:void(0)" class="mlnl_link">业务数据总线管理</a>
+		    		</li>
+		    		<li class="mln_list">
+		    			<span class="mlnl_icon fa fa-eye"></span>
+		    			<a href="javascript:void(0)" class="mlnl_link">监控平台</a>
+		    		</li>
+		    		<li class="mln_list">
+		    			<span class="mlnl_icon fa fa-clipboard"></span>
+		    			<a href="javascript:void(0)" class="mlnl_link">系统日志</a>
+		    		</li>
+		    	</ul>
+		    </div>
+		    <div data-options="region:'center'">
+		    	<iframe id="m_content" class="m_content" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+		    </div>
 		</div>
-		<div class="f_back"></div>
 	</div>
 	<!-- 脚部 -->
-	<div class="footer" id="footer">
+	<div class="footer">
 		<div class="ctbox">
 			<p class="f_info">
 				<a href="javascript:void(0)" class="fi_btn">帮助</a>
 				<span>|</span>
-				<a href="javascript:void(0)" class="fi_btn">维护</a>
+				<a href="javascript:void(0)" class="fi_btn">数据总线管理平台</a>
 			</p>
 			<p class="f_info">建议浏览器：最新Chrome、Firefox、Opera及IE8以上</p>
 			<p class="f_info">版权所有&copy;2017-2018&nbsp;青岛旅游集团</p>
@@ -69,6 +88,6 @@
 	<!-- 引入通用JS文件 -->
 	<script type="text/javascript" src="/work-3-lvYouJiTuan/js/common/common.js"></script>
 	<!-- 引入JS文件 -->
-	<script type="text/javascript" src="/work-3-lvYouJiTuan/js/login/login.js"></script>
+	<script type="text/javascript" src="/work-3-lvYouJiTuan/js/maintain/maintain.js"></script>
 </body>
 </html>

@@ -1,0 +1,50 @@
+/*主体内容*/
+.main{
+	min-height: 400px;
+}
+/*侧边栏*/
+.ml_nav{
+	height: 100%;
+	width: 100%;
+	padding-left: 0;
+	margin: 0;
+	background-color: #CDD9E5;
+}
+.mln_list{
+	height: 40px;
+	width: 100%;
+	line-height: 40px;
+	border-bottom: 1px solid #D9E6ED;
+	position: relative;
+}
+.mln_list:hover,.mln_list.active{
+	background-color: #277CC5;
+	color: #FFF;
+}
+.mlnl_icon{
+	position: absolute;
+	line-height: 40px;
+	left: 10px;
+	font-size: 16px;
+	color: #000;
+}
+.mln_list:hover .mlnl_icon,.mln_list.active .mlnl_icon{
+	color: #FFF;
+}
+.mlnl_link{
+	display: block;
+	height: 100%;
+	width: 100%;
+	font-size: 16px;
+	text-indent: 30px;
+	color: #000;
+	text-decoration: none;
+}
+.mln_list:hover .mlnl_link,.mln_list.active .mlnl_link{
+	color: #FFF;
+}
+/*内容*/
+.m_content{
+	height: 100%;
+	width: 100%;
+}
