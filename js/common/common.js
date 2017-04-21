@@ -29,6 +29,27 @@ function getTodayDate(symbol){
     return nowDate;
 }
 
+// 获取时间对象
+function getTodayDateObj(){
+    var timedate = {};
+    timedate.now = new Date;
+    timedate.year = timedate.now.getFullYear();
+    timedate.month = timedate.now.getMonth()+1;
+    if(timedate.month < 10){
+    	timedate.omonth = "0" +timedate.month;
+    }else{
+    	timedate.omonth = timedate.month;
+    }
+    timedate.date = timedate.now.getDate();
+    if(timedate.date < 10){
+    	timedate.odate = "0" +timedate.date;
+    }else{
+    	timedate.odate = timedate.date;
+    }
+    timedate.day = timedate.now.getDay()+1;
+    return timedate;
+}
+
 /*
  * >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
  * getnowtime(id)  加载当前日期

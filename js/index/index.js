@@ -1,4 +1,8 @@
 $(function(){
+	// 刷新天气数据
+	refreshWeatherData();
+	// 刷新天气数据
+	refreshAirData();
 	// 获取系统板块数据
 	getSystemPlate(function(){
 		// 加载系统板块瀑布布局
@@ -144,4 +148,103 @@ function addMaintainLinkClickEvent(){
 		var src = $(this).attr("yg_url");
 		window.location.href = rootUrl + src;
 	});
+}
+
+// 刷新天气数据
+function refreshWeatherData(){
+	// 判断有cookie 且未过时
+	if($.cookie("weather")){
+		var jsondata = $.cookie("weather");
+		var wdata = $.parseJSON(jsondata);
+		var tdate = getTodayDateObj();
+		if(wdata.date.search(tdate.date) > -1){
+			// 加载数据
+			addWeatherData(wdata);
+			return false;
+		}
+	}
+	// 判断没有cookie 或 cookie过时
+	$.ajax({
+		url: "http://wthrcdn.etouch.cn/weather_mini",
+		type: "GET",
+		dataType: "json",
+		data: {city: "青岛"},
+		success:function(data){
+			// 判定数据是否获取成功
+			if(data.desc != "OK"){
+				return false;
+			}
+			// 加载数据
+			var wdata = data.data.forecast[0];
+			addWeatherData(wdata);
+			// 缓存数据
+			var jsondata = JSON.stringify(wdata);
+			$.cookie("weather",jsondata,{ expires: 1 });
+		},
+		error:function(){
+			alert("服务器链接失败！");
+		}
+	});
+}
+
+// 加载天气数据
+function addWeatherData(wdata){
+	$("#weather").find(".i_info").remove();
+	var tags = '<p class="i_info">天气：'+wdata.type+'</p>'
+				+'<p class="i_info">温度：'+wdata.high.slice(2)+'-'+wdata.low.slice(2)+'</p>'
+				+'<p class="i_info">风向：'+wdata.fengxiang + wdata.fengli+'</p>';
+	$("#weather").append(tags);
+}
+
+// 刷新天气数据
+function refreshAirData(){
+	// 判断有cookie 且未过时
+	if($.cookie("air")){
+		var jsondata = $.cookie("air");
+		var adata = $.parseJSON(jsondata);
+		var tdate = getTodayDateObj();
+		if(adata.date.search(tdate.year+"-"+tdate.omonth+"-"+tdate.odate) > -1){
+			// 加载数据
+			addAirData(adata);
+			return false;
+		}
+	}
+	// 判断没有cookie 或 cookie过时
+	$.ajax({
+		url: "http://www.help.bj.cn/apis/aqilist/",
+		type: "GET",
+		dataType: "json",
+		success:function(data){
+			// 判定数据是否获取成功
+			if(data.status != "0"){
+				return false;
+			}
+			// 加载数据
+			var num; //青岛所在位置数
+			for(var i=0; i<data.aqidata.length; i++){
+				if(data.aqidata[i].city == "青岛"){
+					num = i;
+					break;
+				}
+			}
+			var adata = data.aqidata[num];
+			addAirData(adata);
+			// 缓存数据
+			adata.date = data.update;
+			var jsondata = JSON.stringify(adata);
+			$.cookie("air",jsondata,{ expires: 1 });
+		},
+		error:function(){
+			alert("服务器链接失败！");
+		}
+	});
+}
+
+// 加载天气数据
+function addAirData(adata){
+	$("#air").find(".i_info").remove();
+	var tags = '<p class="i_info">AQI指数：'+adata.aqi+'</p>'
+				+'<p class="i_info">PM2.5：'+adata.pm2_5+' μg/m³</p>'
+				+'<p class="i_info">PM10：'+adata.pm10+' μg/m³</p>';
+	$("#air").append(tags);
 }
